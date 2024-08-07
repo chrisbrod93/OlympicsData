@@ -15,9 +15,11 @@ df.rename(columns={'Population Country Name': 'Country'}, inplace=True)
 df2.columns = ('GDP ' + col for col in df2.columns)
 df2.rename(columns={'GDP Country': 'Country'}, inplace=True)
 
-
+## Total population Data frame
 total_pop = pd.merge(df,df1, on='Country')
 
+
+## Pop and GDP Dataframe
 pop_gdp = pd.merge(total_pop,df2, on='Country')
 
 
